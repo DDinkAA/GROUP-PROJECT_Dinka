@@ -1,54 +1,66 @@
 .hero {
-   @extend %section;
-   padding: 60px 0 0;
+  @extend %section;
+  padding: 60px 0 0;
 
-   &__container {
-   @extend %container;
-   }
+  &__container {
+    @extend %container;
+  }
 
-   &__title {
-    @include font (28px, 700, 1.17);
+  &__title {
+    @include font(28px, 700, 1.17);
     color: $primaryTextColor;
     margin-bottom: 28px;
-   }
 
-   &__text {
-    @include font (14px, 400, 1.5);
+    @include tablet {
+      @include font(42px, 700, 1.19);
+      margin-bottom: 28px;
+      width: 537px;
+    }
+
+    @include desktop {
+      @include font(48px, 700, 1.2);
+      width: 502px;
+    }
+  }
+
+  &__text {
+    @include font(14px, 400, 1.5);
     margin-bottom: 28px;
-   }
-   }
 
-.hero-button {
-    width: 98px;
-    height: 32px;
-    margin-bottom: 50px;
+    @include tablet {
+      @include font(16px, 400, 1.5);
+      margin-bottom: 40px;
+      width: 336px;
+    }
+
+    @include desktop {
+      width: 502px;
+    }
+  }
 }
 
 .hero-picture {
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-   
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 
-    background-image: 
-    url(../images/backgrounds/mobile/Rectangle-1x.webp);
-    @include retina {
+  background-image: url(../images/backgrounds/mobile/Rectangle-1x.webp);
+  @include retina {
     background-image: url(../images/backgrounds/mobile/Rectangle-2x.webp);
-    }
+  }
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: auto;
 
-    &__container {
-        @extend %container;
-    }
+  &__container {
+    @extend %container;
+  }
 
-    &__apple {
+  &__apple {
     width: 100%;
     display: flex;
     justify-content: center;
-}
   }
-
+}

@@ -1,9 +1,40 @@
 
+.logo {
+   @include tablet {
+      margin-right: 191px;
+   }
+
+   @include desktop {
+      margin-right: 735px;
+   }
+}
 
 .header-nav {
    @media screen and (max-width: 767px) {
     display: none;
   }
 
+   &__item:not(:last-child) {
+      margin-right: 28px;
+   }
+
    @extend %list;
+
+   &__link {
+      @extend %link;
+      @include font (14px, 400, 1.17);
+      color: $primaryTextColor;
+   }
+
+   &__link:hover,
+   &__link:focus {
+     @include font (14px, 500, 1.17);
+      color: $AccentColor;
+      text-decoration: underline;
+   }
+}
+
+
+* {
+   outline: 1px solid red;
 }

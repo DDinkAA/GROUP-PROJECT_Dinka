@@ -4,7 +4,7 @@
   list-style: none;
 }
 
-.offering-link {
+.offering-link, .header-nav__link {
   text-decoration: none;
 }
 
@@ -92,8 +92,12 @@ p {
 }
 .header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 479px) {
+  .header-container {
+    justify-content: space-between;
+  }
 }
 
 .menu-toggle {
@@ -115,10 +119,45 @@ p {
   }
 }
 
+.header-nav {
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 191px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .logo {
+    margin-right: 735px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .header-nav {
     display: none;
   }
+}
+.header-nav__item:not(:last-child) {
+  margin-right: 28px;
+}
+.header-nav__link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.17;
+  color: #2c2c2c;
+}
+.header-nav__link:hover, .header-nav__link:focus {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.17;
+  color: #BBF330;
+  text-decoration: underline;
+}
+
+* {
+  outline: 1px solid red;
 }
 
 .hero {
@@ -131,17 +170,42 @@ p {
   color: #2c2c2c;
   margin-bottom: 28px;
 }
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.19;
+    margin-bottom: 28px;
+    width: 537px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    width: 502px;
+  }
+}
 .hero__text {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 28px;
 }
-
-.hero-button {
-  width: 98px;
-  height: 32px;
-  margin-bottom: 50px;
+@media screen and (min-width: 768px) {
+  .hero__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    width: 336px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__text {
+    width: 502px;
+  }
 }
 
 .hero-picture {
@@ -185,6 +249,23 @@ p {
 }
 .order-button--white:hover {
   border: 1px solid #597D00;
+}
+
+.header-button {
+  width: 98px;
+  height: 32px;
+  margin-left: 30px;
+}
+@media screen and (max-width: 480px) {
+  .header-button {
+    display: none;
+  }
+}
+
+.hero-button {
+  width: 98px;
+  height: 32px;
+  margin-bottom: 50px;
 }
 
 .subscribe-button {
