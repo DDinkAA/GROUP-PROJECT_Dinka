@@ -1,0 +1,96 @@
+.offering {
+  @extend %section;
+  max-width: 480px;
+  padding: 41px 0 60px;
+  background-color: $SecondaryBackgroundYellow;
+
+  &-container {
+    @extend %container;
+  }
+
+  &-title {
+    margin-bottom: 28px;
+  }
+
+  &-subtitle {
+    margin-bottom: 28px;
+  }
+
+}
+
+.offering-list {
+  @extend %list;
+
+  &__icon {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    background-color: $primaryWhiteColor;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    @include font (18px, 700, 1.16);
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    @include font (14px, 400, 1.17);
+    margin-bottom: 28px;
+  }
+}
+
+.offering-buttons {
+  @extend %list;
+  display: flex;
+}
+
+.offering-button {
+    width: 106px;
+    height: 40px;
+}
+
+.offering-link {
+  @extend %link;
+  @include font ( 14px, 400, 1.4);
+  color: $primaryTextColor;
+  text-decoration: none;
+  }
+
+.offering-buttons__item {
+  display: flex;
+  align-items: center;
+  
+  &:last-child {
+    margin-left: 24px;
+  }
+}
+
+.offering-buttons__item:last-child::after {
+  display: flex;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  background-image: url(../images/svg/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  align-items: center;
+  margin-left: 4px;
+}
+
+// .offering-buttons__item:last-child::after {
+//     position: absolute;
+//     content: "";
+//     width: 14px;
+//     height: 14px;
+//     display: flex;
+//     align-items: center;
+//     background-color: transparent;
+//     background-image: url(../images/svg/symbol-defs.svg#icon-arrow);
+//     background-size: contain;
+//    }

@@ -1,0 +1,99 @@
+.reviews {
+  @extend %section;
+  max-width: 480px;
+  padding: 60px 0;
+
+  &-container {
+    @extend %container;
+  }
+
+  &-title {
+    margin-bottom: 20px;
+  }
+
+  &-subtitle {
+    margin-bottom: 32px;
+  }
+
+  background-image: 
+    url(../images/backgrounds/mobile/rectangle701-1x.webp);
+    @include retina {
+    background-image: 
+    url(../images/backgrounds/mobile/rectangle701-2x.webp);
+    }
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: auto;
+}
+
+
+.reviews-list {
+    @extend %list;
+    display: flex;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__item {
+    background-color: $primaryWhiteColor;
+    padding: 8px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; 
+    }
+
+    &__text {
+        @include font (16px, 700, 1.17);
+        margin-bottom: 40px;
+    }
+}
+
+.customer {
+        display: flex;
+        align-items: center;
+
+        &__photo {
+            margin-right: 16px;
+        }
+
+        &__name {
+             @include font (14px, 500, 1.5);
+        }
+
+        &__smth {
+             @include font (14px, 400, 1.5);
+        }
+    }
+
+
+.reviews__stars {
+    @extend %list;
+    display: flex;
+    align-items: center;
+    gap: 4px;  
+    margin-bottom: 28px;
+
+    &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+}
+
+.dark-green-line {
+    width: 1px;
+    height: 52px;
+    background-color: $darkGreenColor;
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+

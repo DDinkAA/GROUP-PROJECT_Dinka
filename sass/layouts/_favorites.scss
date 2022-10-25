@@ -1,0 +1,39 @@
+.favorites {
+  @extend %section;
+
+  max-width: 480px;
+  padding: 60px 0;
+  background-color: $primaryWhiteColor;
+
+  &-container {
+    @extend %container;
+    text-align: center;
+  }
+
+  &-title {
+    margin-bottom: 20px;
+  }
+
+  &-subtitle {
+    margin-bottom: 60px;
+  }
+}
+
+.favorite-dishes__list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    @include tablet {
+        gap: 32;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .favorite-dishes__item:nth-last-child(-n + 3) {
+    display: none;  
+}
+    
+}
+
+
