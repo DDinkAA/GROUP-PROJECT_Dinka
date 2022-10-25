@@ -15,17 +15,8 @@
 
 %container {
   margin: 0 auto;
-  
-   @media screen and (min-width: 320px) and (max-width:479px) {
-    width: 100%;
-    padding: 0 20px;
-   }
-
-   @media screen and (min-width: 480px) {
-    width: 480px;
-    padding: 0 20px;
-    
-   }
+  max-width: 480px;
+  padding: 0 20px;
 
   @media screen and (min-width: 768px) {
     width: 768px;

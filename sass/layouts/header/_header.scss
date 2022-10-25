@@ -10,6 +10,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    
   }
 }
 
@@ -31,4 +33,9 @@
   outline: none;
 
   padding: 10px 0;
+}
+
+
+* {
+  outline: 1px solid red;
 }
