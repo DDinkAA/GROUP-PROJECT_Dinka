@@ -33,10 +33,26 @@ p {
 .section-title {
 
     @include font (28px, 700, 1.17);
+
+    @include tablet {
+      @include font (42px, 700, 1.16);
+    }
+
+    @include desktop {
+      @include font (42px, 700, 1.19);
+    }
 }
 
 .section-subtitle {
 
     @include font (14px, 400, 1.17);
+
+    @include tablet {
+      @include font (16px, 400, 1.18);
+    }
+
+    @include desktop {
+      @include font (16px, 400, 1.5);
+    }
 }
 

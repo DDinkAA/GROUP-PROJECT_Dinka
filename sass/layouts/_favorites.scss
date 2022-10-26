@@ -5,9 +5,14 @@
   padding: 60px 0;
   background-color: $primaryWhiteColor;
 
+  @include tablet {
+    max-width: 768px;
+  }
+
   &-container {
     @extend %container;
     text-align: center;
+
   }
 
   &-title {

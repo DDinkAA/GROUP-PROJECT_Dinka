@@ -17,7 +17,7 @@
     border: 2px solid $darkGreenColor;
 
     &:hover {
-      border: 1px solid $DarkGreenHoverColor;
+      border: 2px solid $DarkGreenHoverColor;
     }
   }
 }
@@ -35,7 +35,6 @@
 .hero-button {
   width: 98px;
   height: 32px;
-  margin-bottom: 50px;
 }
 
 .subscribe-button {

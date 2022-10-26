@@ -1,25 +1,63 @@
 .offering {
   @extend %section;
-  max-width: 480px;
   padding: 41px 0 60px;
-  background-color: $SecondaryBackgroundYellow;
+
+  @include tablet {
+    padding: 0 0 60px;
+  }
+
+  background-image: url(../../images/backgrounds/mobile/rectangle-1x.webp);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 480px;
+
+  @include retina {
+    background-image: url(../../images/backgrounds/mobile/rectangle-2x.webp);
+  }
+
+  @include tablet {
+    background-image: none;
+    max-width: 768px;
+    background-color: $SecondaryBackgroundYellow;
+  }
 
   &-container {
     @extend %container;
   }
 
+  &__picture {
+    margin-bottom: 60px;
+  }
+
   &-title {
     margin-bottom: 28px;
+    @include tablet {
+      width: 526px;
+      margin-bottom: 20px;
+    }
   }
 
   &-subtitle {
     margin-bottom: 28px;
+    @include tablet {
+      width: 500px;
+      margin-bottom: 40px;
+    }
   }
-
 }
 
 .offering-list {
   @extend %list;
+
+  @include tablet {
+    display: flex;
+    gap: 116px;
+  }
+
+  &__item:last-child {
+    margin-right: 84px;
+  }
 
   &__icon {
     display: flex;
@@ -33,13 +71,17 @@
   }
 
   &__title {
-    @include font (18px, 700, 1.16);
+    @include font(18px, 700, 1.16);
     margin-bottom: 16px;
   }
 
   &__text {
-    @include font (14px, 400, 1.17);
+    @include font(14px, 400, 1.17);
     margin-bottom: 28px;
+
+    @include tablet {
+     margin-bottom: 40px;
+    }
   }
 }
 
@@ -49,21 +91,21 @@
 }
 
 .offering-button {
-    width: 106px;
-    height: 40px;
+  width: 106px;
+  height: 40px;
 }
 
 .offering-link {
   @extend %link;
-  @include font ( 14px, 400, 1.4);
+  @include font(14px, 400, 1.4);
   color: $primaryTextColor;
   text-decoration: none;
-  }
+}
 
 .offering-buttons__item {
   display: flex;
   align-items: center;
-  
+
   &:last-child {
     margin-left: 24px;
   }

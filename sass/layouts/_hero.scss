@@ -1,6 +1,23 @@
 .hero {
   @extend %section;
-  padding: 60px 0 0;
+  padding: 60px 0;
+
+  @include tablet {
+    max-width: 768px;
+    height: 510px;
+    background-image: url(../images/backgrounds/tab/rectangle1-tab-1x.webp);
+    @include retina {
+      background-image: url(../images/backgrounds/tab/rectangle1-tab-2x.webp);
+    }
+
+    background-size: cover;
+  background-position: top 361px center;
+  background-repeat: no-repeat
+  }
+
+
+
+ 
 
   &__container {
     @extend %container;
@@ -39,28 +56,4 @@
   }
 }
 
-.hero-picture {
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
 
-  background-image: url(../images/backgrounds/mobile/Rectangle-1x.webp);
-  @include retina {
-    background-image: url(../images/backgrounds/mobile/Rectangle-2x.webp);
-  }
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  height: auto;
-
-  &__container {
-    @extend %container;
-  }
-
-  &__apple {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-}

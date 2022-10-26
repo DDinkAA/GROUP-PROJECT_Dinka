@@ -20,7 +20,6 @@
     <!-- Header -->
     <header class="header">
       <div class="header-container">
-        
         <a href="./index.html" class="logo" target="_self">
           <svg width="66" height="52">
             <use href="./images/svg/symbol-defs.svg#logo-foodsta"></use>
@@ -46,11 +45,11 @@
         </ul>
 
         <button
-            type="button"
-            class="order-button header-button order-button--green"
-          >
-            Order Now
-          </button>
+          type="button"
+          class="order-button header-button order-button--green"
+        >
+          Order Now
+        </button>
 
         <button
           class="menu-toggle js-open-menu"
@@ -85,35 +84,46 @@
             Order Now
           </button>
         </div>
-        <div class="hero-picture">
-          <div class="hero-picture__container">
-            <picture class="hero-picture__apple">
-              <source
-                srcset="
-                  ./images/fruits/Apple-320.webp   320w,
-                  ./images/fruits/Apple-640.webp   640w,
-                  ./images/fruits/Apple-960.webp   960w,
-                  ./images/fruits/Apple-1280.webp 1280w,
-                  ./images/fruits/Apple-1600.webp 1600w
-                "
-                type="image/webp"
-                media="(min-width: 320px)"
-              />
-
-              <img
-                src="./images/fruits/Apple-320.png"
-                alt="Apple"
-                width="100%"
-              />
-            </picture>
-          </div>
-        </div>
       </section>
 
       <!-- Offering -->
 
       <section class="offering">
         <div class="offering-container">
+          <div class="offering__picture">
+            <picture>
+              <source
+                srcset="
+                  ./images/fruits/apple-320.webp   320w,
+                  ./images/fruits/apple-640.webp   640w,
+                  ./images/fruits/apple-960.webp   960w,
+                  ./images/fruits/apple-1280.webp 1280w,
+                  ./images/fruits/apple-1600.webp 1600w
+                "
+                type="image/webp"
+                media="(max-width: 767px)"
+              />
+
+              <source
+                srcset="
+                  ./images/fruits/3apples-tab-320.webp   320w,
+                  ./images/fruits/3apples-tab-640.webp   640w,
+                  ./images/fruits/3apples-tab-960.webp   960w,
+                  ./images/fruits/3apples-tab-1280.webp 1280w,
+                  ./images/fruits/3apples-tab-1600.webp 1600w
+                "
+                type="image/webp"
+                media="(min-width: 768px)"
+              />
+
+              <img
+                src="./images/fruits/3apples-tab-320.png"
+                alt="Apple"
+                width="100%"
+              />
+            </picture>
+          </div>
+
           <h2 class="offering-title section-title">
             What’s Special About Our Offerings
           </h2>
@@ -176,7 +186,7 @@
           <p class="favorites-subtitle section-subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
-          <ul class="favorite-dishes__list">
+          <!-- <ul class="favorite-dishes__list">
             <li class="favorite-dishes__item">
               <a href="#">
                 <picture>
@@ -303,7 +313,7 @@
                 </picture>
               </a>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </section>
 
@@ -434,12 +444,7 @@
             </li>
           </ul>
         </div>
-      </section>
-
-      <!-- Subscribtion -->
-      <section class="subscribtion">
-        <div class="subscribtion__picture-box">
-          <div class="subscribtion__picture">
+        <div class="review__picture">
             <picture>
               <source
                 srcset="
@@ -458,8 +463,10 @@
               />
             </picture>
           </div>
-        </div>
+      </section>
 
+      <!-- Subscribtion -->
+      <section class="subscribtion">
         <div class="subscribtion-container">
           <h2 class="subscribtion-title section-title">
             Subscribe To Get Special Offers
@@ -479,8 +486,7 @@
               />
               <span class="subscription-form__label">Enter your email</span>
             </label>
-          </div>
-          <div class="subscription-form__button-box">
+            <div class="subscription-form__button-box">
             <button
               type="button"
               class="subscribe-button subscribe-button--green"
@@ -488,6 +494,8 @@
               Subscribe
             </button>
           </div>
+          </div>
+          
         </div>
       </section>
     </main>
