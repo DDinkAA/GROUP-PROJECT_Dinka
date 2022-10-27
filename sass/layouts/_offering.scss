@@ -17,7 +17,7 @@
   @include tablet {
     padding: 458px 0 60px;
     background-color: $SecondaryBackgroundYellow;
-  
+
     max-width: 768px;
     background-image: url(../images/fruits/3apples-tab-1x.png);
     @include retina {
@@ -38,7 +38,6 @@
     background-repeat: no-repeat;
     background-size: 550px;
     background-position: top -12px left 16px;
-
   }
 
   &-container {
@@ -67,7 +66,6 @@
 
 .offering-list {
   @extend %list;
-  
 
   @include tablet {
     display: flex;
@@ -79,14 +77,20 @@
     }
   }
 
-  &__item:last-child {
+  &__item:first-child {
     margin-bottom: 28px;
     @include tablet {
-      margin-right: 0;
       margin-bottom: 40px;
     }
     @include desktop {
       margin-bottom: 32px;
+    }
+  }
+
+  &__item:last-child {
+    margin-bottom: 28px;
+    @include tablet {
+      margin-bottom: 0;
     }
   }
 
@@ -108,12 +112,10 @@
 
   &__text {
     @include font(14px, 400, 1.17);
-    // margin-bottom: 28px;
 
     @include tablet {
       // margin-bottom: 40px;
     }
-
   }
 }
 
@@ -156,4 +158,3 @@
   align-items: center;
   margin-left: 4px;
 }
-

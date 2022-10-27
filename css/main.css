@@ -1,4 +1,4 @@
-.reviews__stars, .reviews-list, .offering-buttons, .offering-list, .header-nav {
+.reviews__stars, .reviews-list, .favorite-dishes__list, .offering-buttons, .offering-list, .header-nav {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -8,34 +8,34 @@
   text-decoration: none;
 }
 
-.subscribtion, .reviews, .offering, .hero, .header {
+.subscribtion, .reviews, .favorites, .offering, .hero, .header {
   margin-left: auto;
   margin-right: auto;
 }
 
-.subscribtion-container, .reviews-container, .offering-container, .hero__container, .header-container {
+.subscribtion-container, .reviews-container, .favorites-container, .offering-container, .hero__container, .header-container {
   margin: 0 auto;
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
-  .subscribtion-container, .reviews-container, .offering-container, .hero__container, .header-container {
+  .subscribtion-container, .reviews-container, .favorites-container, .offering-container, .hero__container, .header-container {
     width: 100%;
     padding: 0 20px;
   }
 }
 @media screen and (min-width: 480px) {
-  .subscribtion-container, .reviews-container, .offering-container, .hero__container, .header-container {
+  .subscribtion-container, .reviews-container, .favorites-container, .offering-container, .hero__container, .header-container {
     width: 480px;
     padding: 0 20px;
   }
 }
 @media screen and (min-width: 768px) {
-  .subscribtion-container, .reviews-container, .offering-container, .hero__container, .header-container {
+  .subscribtion-container, .reviews-container, .favorites-container, .offering-container, .hero__container, .header-container {
     width: 768px;
     padding: 0 32px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .subscribtion-container, .reviews-container, .offering-container, .hero__container, .header-container {
+  .subscribtion-container, .reviews-container, .favorites-container, .offering-container, .hero__container, .header-container {
     width: 1280px;
     padding: 0 16px;
   }
@@ -423,18 +423,25 @@ p {
     gap: 67px;
   }
 }
+.offering-list__item:first-child {
+  margin-bottom: 28px;
+}
+@media screen and (min-width: 768px) {
+  .offering-list__item:first-child {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .offering-list__item:first-child {
+    margin-bottom: 32px;
+  }
+}
 .offering-list__item:last-child {
   margin-bottom: 28px;
 }
 @media screen and (min-width: 768px) {
   .offering-list__item:last-child {
-    margin-right: 0;
-    margin-bottom: 40px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .offering-list__item:last-child {
-    margin-bottom: 32px;
+    margin-bottom: 0;
   }
 }
 .offering-list__icon {
@@ -497,20 +504,66 @@ p {
   margin-left: 4px;
 }
 
+.favorites {
+  max-width: 480px;
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .favorites {
+    max-width: 768px;
+  }
+}
+.favorites-container {
+  text-align: center;
+}
+.favorites-title {
+  margin-bottom: 20px;
+}
+.favorites-subtitle {
+  margin-bottom: 60px;
+}
+
+.favorite-dishes__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .favorite-dishes__list {
+    gap: 32;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .favorite-dishes__item:nth-last-child(-n+3) {
+    display: none;
+    width: 100%;
+  }
+}
+.favorite-dishes__item {
+  border: 14px solid #FFE550;
+  border-radius: 50%;
+}
+
 .reviews {
   position: relative;
-  padding: 60px 0 120px;
+  padding: 60px 0 60px;
   background-image: url(../images/backgrounds/mobile/rectangle2-mob-1x.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
   max-width: 480px;
 }
+@media screen and (min-width: 768px) {
+  .reviews {
+    padding: 60px 0 120px;
+  }
+}
 @media screen and (min-width: 1280px) {
   .reviews {
-    padding-top: 100px;
+    padding: 100px 0 255px;
     height: 652px;
-    padding-bottom: 205px;
   }
 }
 .reviews-title {
@@ -638,6 +691,7 @@ p {
     bottom: 0;
     left: 21%;
     width: 57%;
+    transform: translateY(50%);
   }
 }
 @media screen and (min-width: 768px) {
@@ -657,7 +711,12 @@ p {
 }
 
 .subscribtion {
-  padding: 0 0 60px;
+  padding: 52px 0 60px;
+}
+@media screen and (min-width: 768px) {
+  .subscribtion {
+    padding: 80px 0 100px;
+  }
 }
 .subscribtion-title {
   margin-bottom: 20px;

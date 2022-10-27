@@ -12,7 +12,6 @@
   &-container {
     @extend %container;
     text-align: center;
-
   }
 
   &-title {
@@ -25,20 +24,23 @@
 }
 
 .favorite-dishes__list {
-    @extend %list;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    @include tablet {
-        gap: 32;
-    }
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  @include tablet {
+    gap: 32;
+  }
 }
 
-@media screen and (max-width:767px) {
-    .favorite-dishes__item:nth-last-child(-n + 3) {
-    display: none;  
-}
-    
+@media screen and (max-width: 767px) {
+  .favorite-dishes__item:nth-last-child(-n + 3) {
+    display: none;
+    width: 100%;
+  }
 }
 
-
+.favorite-dishes__item {
+  border: 14px solid $SecondaryBackgroundYellow;
+  border-radius: 50%;
+}
