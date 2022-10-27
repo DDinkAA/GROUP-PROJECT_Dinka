@@ -15,7 +15,7 @@
   }
 }
 
-.menu-toggle {
+.menu-toggle--open {
   @include tablet {
     display: none;
   }
@@ -32,7 +32,11 @@
   border: none;
   outline: none;
 
-  padding: 10px 0;
+  fill: $darkGreenColor;
+}
+
+.menu-toggle--open:focus {
+  fill: $SecondaryBackgroundYellow;
 }
 
 .header-nav {
