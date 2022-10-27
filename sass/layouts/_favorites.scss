@@ -9,6 +9,10 @@
     max-width: 768px;
   }
 
+  @include desktop {
+    max-width: 1280px;
+  }
+
   &-container {
     @extend %container;
     text-align: center;
@@ -21,6 +25,7 @@
   &-subtitle {
     margin-bottom: 60px;
   }
+
 }
 
 .favorites__list {
@@ -37,7 +42,6 @@
 @media screen and (max-width: 767px) {
   .favorites__item:nth-last-child(-n + 3) {
     display: none;
-    width: 100%;
   }
 }
 
@@ -50,13 +54,26 @@
   border: 14px solid $SecondaryBackgroundYellow;
   border-radius: 50%;
   
+  @include tablet {
+    width:calc((100% - 32px) / 2);
+    height: 338px;
+  }
+  @include desktop {
+    width: calc((100% - 64px) / 3);
+    height: 397px;
+  }
+  
 }
 
 .favorites__link {
- width: 223px;
- height: 223px;
+  width: 223px;
+
+@include tablet {
+ width: 267px;
 }
 
-* {
-  outline: 1px solid red;
+@include desktop {
+  width: 315px;
 }
+}
+

@@ -514,6 +514,11 @@ p {
     max-width: 768px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .favorites {
+    max-width: 1280px;
+  }
+}
 .favorites-container {
   text-align: center;
 }
@@ -539,7 +544,6 @@ p {
 @media screen and (max-width: 767px) {
   .favorites__item:nth-last-child(-n+3) {
     display: none;
-    width: 100%;
   }
 }
 .favorites__item {
@@ -551,14 +555,31 @@ p {
   border: 14px solid #FFE550;
   border-radius: 50%;
 }
+@media screen and (min-width: 768px) {
+  .favorites__item {
+    width: calc((100% - 32px) / 2);
+    height: 338px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .favorites__item {
+    width: calc((100% - 64px) / 3);
+    height: 397px;
+  }
+}
 
 .favorites__link {
   width: 223px;
-  height: 223px;
 }
-
-* {
-  outline: 1px solid red;
+@media screen and (min-width: 768px) {
+  .favorites__link {
+    width: 267px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .favorites__link {
+    width: 315px;
+  }
 }
 
 .reviews {
