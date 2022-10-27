@@ -1,4 +1,4 @@
-.reviews__stars, .reviews-list, .favorite-dishes__list, .offering-buttons, .offering-list, .header-nav {
+.reviews__stars, .reviews-list, .favorites__list, .offering-buttons, .offering-list, .header-nav {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -524,26 +524,41 @@ p {
   margin-bottom: 60px;
 }
 
-.favorite-dishes__list {
+.favorites__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 @media screen and (min-width: 768px) {
-  .favorite-dishes__list {
+  .favorites__list {
     gap: 32;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .favorite-dishes__item:nth-last-child(-n+3) {
+  .favorites__item:nth-last-child(-n+3) {
     display: none;
     width: 100%;
   }
 }
-.favorite-dishes__item {
+.favorites__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 280px;
   border: 14px solid #FFE550;
   border-radius: 50%;
+}
+
+.favorites__link {
+  width: 223px;
+  height: 223px;
+}
+
+* {
+  outline: 1px solid red;
 }
 
 .reviews {
