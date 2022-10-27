@@ -3,6 +3,9 @@
    @include tablet {
       margin-right: 191px;
    }
+   @include desktop {
+      margin-right: 735px;
+   }
 
    @include desktop {
       margin-right: 735px;

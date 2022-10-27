@@ -9,13 +9,9 @@
     @extend %container;
     display: flex;
     align-items: center;
-    @media screen and (max-width:479px) {
+    @media screen and (max-width: 480px) {
       justify-content: space-between;
     }
-
-  
-
-
   }
 }
 
@@ -40,7 +36,8 @@
 }
 
 .header-nav {
-  display: flex;
+  display: none;
+  @include tablet {
+    display: flex;
+  }
 }
-
-

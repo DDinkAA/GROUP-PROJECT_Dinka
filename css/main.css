@@ -1,4 +1,4 @@
-.reviews__stars, .reviews-list, .favorite-dishes__list, .offering-buttons, .offering-list, .header-nav {
+.reviews__stars, .reviews-list, .offering-buttons, .offering-list, .header-nav {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -8,34 +8,34 @@
   text-decoration: none;
 }
 
-.subscribtion, .reviews, .favorites, .offering, .hero, .header {
+.subscribtion, .reviews, .offering, .hero, .header {
   margin-left: auto;
   margin-right: auto;
 }
 
-.subscribtion-container, .reviews-container, .favorites-container, .offering-container, .hero__container, .header-container {
+.subscribtion-container, .reviews-container, .offering-container, .hero__container, .header-container {
   margin: 0 auto;
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
-  .subscribtion-container, .reviews-container, .favorites-container, .offering-container, .hero__container, .header-container {
+  .subscribtion-container, .reviews-container, .offering-container, .hero__container, .header-container {
     width: 100%;
     padding: 0 20px;
   }
 }
 @media screen and (min-width: 480px) {
-  .subscribtion-container, .reviews-container, .favorites-container, .offering-container, .hero__container, .header-container {
+  .subscribtion-container, .reviews-container, .offering-container, .hero__container, .header-container {
     width: 480px;
     padding: 0 20px;
   }
 }
 @media screen and (min-width: 768px) {
-  .subscribtion-container, .reviews-container, .favorites-container, .offering-container, .hero__container, .header-container {
+  .subscribtion-container, .reviews-container, .offering-container, .hero__container, .header-container {
     width: 768px;
     padding: 0 32px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .subscribtion-container, .reviews-container, .favorites-container, .offering-container, .hero__container, .header-container {
+  .subscribtion-container, .reviews-container, .offering-container, .hero__container, .header-container {
     width: 1280px;
     padding: 0 16px;
   }
@@ -122,7 +122,7 @@ p {
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 480px) {
   .header-container {
     justify-content: space-between;
   }
@@ -148,12 +148,22 @@ p {
 }
 
 .header-nav {
-  display: flex;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header-nav {
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .logo {
     margin-right: 191px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .logo {
+    margin-right: 735px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -185,21 +195,43 @@ p {
 }
 
 .hero {
-  padding: 60px 0;
+  padding: 50px 0 60px;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    padding: 159px 0 0;
+  }
 }
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
     height: 510px;
-    background-image: url(../images/backgrounds/tab/rectangle1-tab-1x.webp);
-    background-size: cover;
-    background-position: top 361px center;
+    background-image: url(../images/backgrounds/tab/rectangle1-tab-1x.jpeg);
+    background-position: 0 361px;
     background-repeat: no-repeat;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/backgrounds/tab/rectangle1-tab-2x.webp);
+    background-image: url(../images/backgrounds/tab/rectangle1-tab-2x.jpeg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    min-width: 1280px;
+    height: 633px;
+    background-image: url(../images/backgrounds/desktop/rectangle1-desk-1x.jpeg);
+    background-position: 0 447px;
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/backgrounds/desktop/rectangle1-desk-1x.jpeg);
   }
 }
 .hero__title {
@@ -214,7 +246,7 @@ p {
     font-size: 42px;
     font-weight: 700;
     line-height: 1.19;
-    margin-bottom: 28px;
+    margin-bottom: 44px;
     width: 537px;
   }
 }
@@ -311,31 +343,53 @@ p {
 }
 
 .offering {
-  padding: 41px 0 60px;
-  background-image: url(../../images/backgrounds/mobile/rectangle-1x.webp);
+  padding: 410px 0 60px;
+  background-image: url(../images/fruits/apple-mob-1x.png), url(../images/backgrounds/mobile/rectangle-1x.jpeg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 280px, cover;
+  background-position: top 41px center, top center;
   max-width: 480px;
-}
-@media screen and (min-width: 768px) {
-  .offering {
-    padding: 0 0 60px;
-  }
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .offering {
-    background-image: url(../../images/backgrounds/mobile/rectangle-2x.webp);
+    background-image: url(../images/fruits/apple-mob-2x.png), url(../images/backgrounds/mobile/rectangle-2x.jpeg);
   }
 }
 @media screen and (min-width: 768px) {
   .offering {
-    background-image: none;
-    max-width: 768px;
+    padding: 458px 0 60px;
     background-color: #FFE550;
+    max-width: 768px;
+    background-image: url(../images/fruits/3apples-tab-1x.png);
+    background-repeat: no-repeat;
+    background-size: 704px;
+    background-position: top center;
   }
 }
-.offering__picture {
-  margin-bottom: 60px;
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .offering {
+    background-image: url(../images/fruits/3apples-tab-2x.png);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .offering {
+    padding: 74px 0 100px 0;
+    max-width: 1280px;
+    background-image: url(../images/fruits/apple-desk-1x.png);
+    background-repeat: no-repeat;
+    background-size: 550px;
+    background-position: top -12px left 16px;
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .offering {
+    background-image: url(../images/fruits/apple-desk-2x.png);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .offering-container {
+    padding-left: 640px;
+  }
 }
 .offering-title {
   margin-bottom: 28px;
@@ -359,11 +413,29 @@ p {
 @media screen and (min-width: 768px) {
   .offering-list {
     display: flex;
+    width: 620px;
     gap: 116px;
   }
 }
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .offering-list {
+    width: 573px;
+    gap: 67px;
+  }
+}
 .offering-list__item:last-child {
-  margin-right: 84px;
+  margin-bottom: 28px;
+}
+@media screen and (min-width: 768px) {
+  .offering-list__item:last-child {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .offering-list__item:last-child {
+    margin-bottom: 32px;
+  }
 }
 .offering-list__icon {
   display: flex;
@@ -385,14 +457,7 @@ p {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.17;
-  margin-bottom: 28px;
 }
-@media screen and (min-width: 768px) {
-  .offering-list__text {
-    margin-bottom: 40px;
-  }
-}
-
 .offering-buttons {
   display: flex;
 }
@@ -432,58 +497,20 @@ p {
   margin-left: 4px;
 }
 
-.favorites {
-  max-width: 480px;
-  padding: 60px 0;
-  background-color: #ffffff;
-}
-@media screen and (min-width: 768px) {
-  .favorites {
-    max-width: 768px;
-  }
-}
-.favorites-container {
-  text-align: center;
-}
-.favorites-title {
-  margin-bottom: 20px;
-}
-.favorites-subtitle {
-  margin-bottom: 60px;
-}
-
-.favorite-dishes__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-@media screen and (min-width: 768px) {
-  .favorite-dishes__list {
-    gap: 32;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .favorite-dishes__item:nth-last-child(-n+3) {
-    display: none;
-  }
-}
 .reviews {
   position: relative;
-  max-width: 480px;
-  padding: 60px 0 60px;
-  background-image: url(../images/backgrounds/mobile/rectangle701-1x.webp);
+  padding: 60px 0 120px;
+  background-image: url(../images/backgrounds/mobile/rectangle2-mob-1x.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
+  max-width: 480px;
 }
-.reviews * {
-  outline: 1px solid red;
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .reviews {
-    max-width: 768px;
-    height: 544px;
+    padding-top: 100px;
+    height: 652px;
+    padding-bottom: 205px;
   }
 }
 .reviews-title {
@@ -494,20 +521,33 @@ p {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .reviews {
-    background-image: url(../images/backgrounds/mobile/rectangle701-2x.webp);
+    background-image: url(../images/backgrounds/mobile/rectangle2-mob-1x.jpeg);
   }
 }
 @media screen and (min-width: 768px) {
   .reviews {
-    background-image: url(../images/backgrounds/tab/rectangle2-tab-1x.webp);
-    background-size: cover;
+    background-image: url(../images/backgrounds/tab/rectangle2-tab-1x.jpeg);
     background-position: bottom center;
     background-repeat: no-repeat;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .reviews {
-    background-image: url(../images/backgrounds/tab/rectangle2-tab-2x.webp);
+    background-image: url(../images/backgrounds/tab/rectangle2-tab-2x.jpeg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviews {
+    background-image: url(../images/backgrounds/desktop/rectangle2-desk-1x.jpeg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    max-width: 1280px;
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .reviews {
+    background-image: url(../images/backgrounds/desktop/rectangle2-desk-2x.jpeg);
   }
 }
 
@@ -519,6 +559,12 @@ p {
   .reviews-list {
     flex-direction: column;
     gap: 24px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviews-list {
+    max-width: 1141px;
+    gap: 139px;
   }
 }
 .reviews-list__item {
@@ -586,7 +632,6 @@ p {
 
 .review__picture {
   position: absolute;
-  transform: translateY(50%);
 }
 @media screen and (max-width: 767px) {
   .review__picture {
@@ -600,22 +645,19 @@ p {
     max-width: 281px;
     right: 32px;
     bottom: 0;
+    transform: translateY(45%);
   }
 }
 @media screen and (min-width: 1280px) {
   .review__picture {
-    width: 608px;
+    min-width: 605px;
+    bottom: -60px;
+    right: 0;
   }
 }
 
 .subscribtion {
-  max-width: 480px;
   padding: 0 0 60px;
-}
-@media screen and (min-width: 768px) {
-  .subscribtion {
-    max-width: 768px;
-  }
 }
 .subscribtion-title {
   margin-bottom: 20px;
@@ -626,11 +668,24 @@ p {
     margin-top: 82px;
   }
 }
+@media screen and (min-width: 768px) {
+  .subscribtion-title {
+    margin-top: 0;
+  }
+}
 .subscribtion-subtitle {
-  margin-bottom: 49px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .subscribtion-subtitle {
+    width: 656px;
+    margin-bottom: 24px;
+  }
 }
 
 .subscription-form {
+  display: block;
+  text-align: right;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
@@ -649,21 +704,22 @@ p {
   border-radius: 30px;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 768px) {
+  .subscription-form__input {
+    width: 394px;
+    margin-right: 22px;
+    margin-bottom: 0;
+  }
+}
 .subscription-form__label {
   position: absolute;
   top: 0;
-  left: 11px;
-  top: 50%;
+  left: 12px;
   color: #505050;
-  transform: translate(0, -50%);
 }
-
-.subscription-form__button-box {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.subscribe-button {
-  margin: 0 0 auto;
-  justify-content: flex-end;
+@media screen and (min-width: 768px) {
+  .subscription-form__label {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }/*# sourceMappingURL=main.css.map */

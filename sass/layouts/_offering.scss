@@ -1,33 +1,51 @@
 .offering {
   @extend %section;
-  padding: 41px 0 60px;
+  padding: 410px 0 60px;
 
-  @include tablet {
-    padding: 0 0 60px;
+  background-image: url(../images/fruits/apple-mob-1x.png),
+    url(../images/backgrounds/mobile/rectangle-1x.jpeg);
+  @include retina {
+    background-image: url(../images/fruits/apple-mob-2x.png),
+      url(../images/backgrounds/mobile/rectangle-2x.jpeg);
   }
-
-  background-image: url(../../images/backgrounds/mobile/rectangle-1x.webp);
 
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 280px, cover;
+  background-position: top 41px center, top center;
   max-width: 480px;
 
-  @include retina {
-    background-image: url(../../images/backgrounds/mobile/rectangle-2x.webp);
+  @include tablet {
+    padding: 458px 0 60px;
+    background-color: $SecondaryBackgroundYellow;
+  
+    max-width: 768px;
+    background-image: url(../images/fruits/3apples-tab-1x.png);
+    @include retina {
+      background-image: url(../images/fruits/3apples-tab-2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: 704px;
+    background-position: top center;
   }
 
-  @include tablet {
-    background-image: none;
-    max-width: 768px;
-    background-color: $SecondaryBackgroundYellow;
+  @include desktop {
+    padding: 74px 0 100px 0;
+    max-width: 1280px;
+    background-image: url(../images/fruits/apple-desk-1x.png);
+    @include retina {
+      background-image: url(../images/fruits/apple-desk-2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: 550px;
+    background-position: top -12px left 16px;
+
   }
 
   &-container {
     @extend %container;
-  }
-
-  &__picture {
-    margin-bottom: 60px;
+    @include desktop {
+      padding-left: 640px;
+    }
   }
 
   &-title {
@@ -49,14 +67,27 @@
 
 .offering-list {
   @extend %list;
+  
 
   @include tablet {
     display: flex;
+    width: 620px;
     gap: 116px;
+    @include desktop {
+      width: 573px;
+      gap: 67px;
+    }
   }
 
   &__item:last-child {
-    margin-right: 84px;
+    margin-bottom: 28px;
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+    @include desktop {
+      margin-bottom: 32px;
+    }
   }
 
   &__icon {
@@ -77,11 +108,12 @@
 
   &__text {
     @include font(14px, 400, 1.17);
-    margin-bottom: 28px;
+    // margin-bottom: 28px;
 
     @include tablet {
-     margin-bottom: 40px;
+      // margin-bottom: 40px;
     }
+
   }
 }
 
@@ -125,14 +157,3 @@
   margin-left: 4px;
 }
 
-// .offering-buttons__item:last-child::after {
-//     position: absolute;
-//     content: "";
-//     width: 14px;
-//     height: 14px;
-//     display: flex;
-//     align-items: center;
-//     background-color: transparent;
-//     background-image: url(../images/svg/symbol-defs.svg#icon-arrow);
-//     background-size: contain;
-//    }

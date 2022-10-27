@@ -1,17 +1,13 @@
 .reviews {
   position: relative;
   @extend %section;
-  max-width: 480px;
-  padding: 60px 0 60px;
-
-  *{
-    outline: 1px solid red;
-  }
-  
-
+  padding: 60px 0 120px;
   @include tablet {
-    max-width: 768px;
-    height: 544px;
+  }
+  @include desktop {
+    padding-top: 100px;
+    height: 652px;
+    padding-bottom: 205px;
   }
 
   &-container {
@@ -26,25 +22,35 @@
     margin-bottom: 32px;
   }
 
-  background-image: url(../images/backgrounds/mobile/rectangle701-1x.webp);
+  background-image: url(../images/backgrounds/mobile/rectangle2-mob-1x.jpeg);
   @include retina {
-    background-image: url(../images/backgrounds/mobile/rectangle701-2x.webp);
+    background-image: url(../images/backgrounds/mobile/rectangle2-mob-1x.jpeg);
   }
 
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-position: bottom center;
-  // height: 100%;
+  max-width: 480px;
 
   @include tablet {
-    background-image: url(../images/backgrounds/tab/rectangle2-tab-1x.webp);
+    background-image: url(../images/backgrounds/tab/rectangle2-tab-1x.jpeg);
     @include retina {
-      background-image: url(../images/backgrounds/tab/rectangle2-tab-2x.webp);
+      background-image: url(../images/backgrounds/tab/rectangle2-tab-2x.jpeg);
     }
 
-    background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
+    max-width: 768px;
+  }
+
+  @include desktop {
+    background-image: url(../images/backgrounds/desktop/rectangle2-desk-1x.jpeg);
+    @include retina {
+      background-image: url(../images/backgrounds/desktop/rectangle2-desk-2x.jpeg);
+    }
+    background-position: top center;
+    background-repeat: no-repeat;
+    max-width: 1280px;
   }
 }
 
@@ -56,6 +62,10 @@
     flex-direction: column;
     gap: 24px;
   }
+  @include desktop {
+    max-width: 1141px;
+    gap: 139px;
+  }
 
   &__item {
     background-color: $primaryWhiteColor;
@@ -64,7 +74,7 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 
-    @include tablet{
+    @include tablet {
       padding: 12px;
     }
   }
@@ -75,7 +85,6 @@
 
     @include tablet {
       @include font(18px, 700, 1.2);
-
     }
   }
 }
@@ -119,24 +128,24 @@
 }
 
 .review__picture {
-    position: absolute;
+  position: absolute;
 
-    @media screen and (max-width: 767px) {
-      bottom: 0;
-      left: 21%;
-      width: 57%;
-    }
-    
+  @media screen and (max-width: 767px) {
+    bottom: 0;
+    left: 21%;
+    width: 57%;
+  }
 
-    @include tablet {
-        max-width: 281px;
-        right:32px;
-        bottom: 0;
-    }
+  @include tablet {
+    max-width: 281px;
+    right: 32px;
+    bottom: 0;
+    transform: translateY(45%);
+  }
 
-     @include desktop {
-        width: 608px;
-    }
-
-    transform: translateY(50%);
+  @include desktop {
+    min-width: 605px;
+    bottom: -60px;
+    right: 0;
+  }
 }
