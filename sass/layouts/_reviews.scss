@@ -127,26 +127,40 @@
   margin-left: 15px;
 }
 
-.review__picture {
+.review__picture-wrapper {
   position: absolute;
 
   @media screen and (max-width: 767px) {
     bottom: 0;
-    left: 21%;
-    width: 57%;
-    transform: translateY(50%)
+    left: 50%;
+    transform: translate(-50%, 50%);
   }
 
   @include tablet {
-    max-width: 281px;
     right: 32px;
     bottom: 0;
     transform: translateY(45%);
   }
 
   @include desktop {
-    min-width: 605px;
     bottom: -60px;
     right: 0;
+  }
+}
+
+.review__picture-image {
+  @include mobile {
+    transform: scale(64%);
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 256px;
+  }
+
+  @include tablet {
+    width: 281px;
+  }
+  @include desktop {
+    width: 608px;
   }
 }

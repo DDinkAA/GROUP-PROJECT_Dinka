@@ -22,87 +22,50 @@
     @include desktop {
       display: flex;
     }
-  
   }
 
-  .offering__picture {
+  &__picture-wrapper {
     display: none;
-  }
 
-  .offering__data {
-    @include desktop {
-      margin-left: 656px;
+    &--mob {
+      justify-content: center;
+      max-width: 440px;
+      min-width: 280px;
+      margin-bottom: 60px;
+
+      @media screen and (max-width: 767px) {
+        display: block;
+      }
+    }
+
+    &--tab {
+      margin-bottom: 60px;
+      @media screen and (min-width: 768px) and (max-width: 1279px) {
+        display: block;
+      }
+    }
+
+    &--desk {
+      position: absolute;
+      top: 0;
+      left: 16px;
+      @include desktop {
+        display: block;
+      }
     }
   }
 
-  .offering__picture--mob {
-   
-    @media screen and (max-width: 767px) {
-      display: block;
-    }
-    margin-bottom: 60px;
+  &__picture--mob {
+    width: 100%;
+  }
+}
+
+.offering-data {
+  @include desktop {
+    margin-left: 656px;
   }
 
-  .offering__picture--tab {
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-      display: block;
-    }
-    margin-bottom: 60px;
-  }
-
-  .offering__picture--desk {
-    position: absolute;
-    top: 0;
-    left: 16px;
-    @include desktop {
-      display: block;
-    }
-  }
-
-
-
-
-  // background-image: url(../images/fruits/apple-mob-1x.png),
-  //   url(../images/backgrounds/mobile/rectangle-1x.jpeg);
-  // @include retina {
-  //   background-image: url(../images/fruits/apple-mob-2x.png),
-  //     url(../images/backgrounds/mobile/rectangle-2x.jpeg);
-  // }
-
-  // background-repeat: no-repeat;
-  // background-size: 280px, cover;
-  // background-position: top 41px center, top center;
-  // max-width: 480px;
-
-  // @include tablet {
-  //   padding: 458px 0 60px;
-  //   background-color: $SecondaryBackgroundYellow;
-
-  //   max-width: 768px;
-  //   background-image: url(../images/fruits/3apples-tab-1x.png);
-  //   @include retina {
-  //     background-image: url(../images/fruits/3apples-tab-2x.png);
-  //   }
-  //   background-repeat: no-repeat;
-  //   background-size: 704px;
-  //   background-position: top center;
-  // }
-
-  // @include desktop {
-  //   padding: 74px 0 100px 0;
-  //   max-width: 1280px;
-  //   background-image: url(../images/fruits/apple-desk-1x.png);
-  //   @include retina {
-  //     background-image: url(../images/fruits/apple-desk-2x.png);
-  //   }
-  //   background-repeat: no-repeat;
-  //   background-size: 550px;
-  //   background-position: top -12px left 16px;
-  // }
-
-  
-
-  &-title {
+  &__title {
     margin-bottom: 28px;
     @include tablet {
       width: 526px;
@@ -110,7 +73,7 @@
     }
   }
 
-  &-subtitle {
+  &__subtitle {
     margin-bottom: 28px;
     @include tablet {
       width: 500px;
@@ -167,49 +130,45 @@
 
   &__text {
     @include font(14px, 400, 1.17);
-
-    @include tablet {
-      // margin-bottom: 40px;
-    }
   }
 }
 
 .offering-buttons {
   @extend %list;
   display: flex;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-left: 24px;
+    }
+
+    &:last-child::after {
+      display: flex;
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-color: transparent;
+      background-image: url(../images/svg/arrow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      align-items: center;
+      margin-left: 4px;
+    }
+
+    &--arrow {
+      @extend %link;
+      @include font(14px, 400, 1.4);
+      color: $primaryTextColor;
+      text-decoration: none;
+    }
+  }
 }
 
 .offering-button {
   width: 106px;
   height: 40px;
-}
-
-.offering-link {
-  @extend %link;
-  @include font(14px, 400, 1.4);
-  color: $primaryTextColor;
-  text-decoration: none;
-}
-
-.offering-buttons__item {
-  display: flex;
-  align-items: center;
-
-  &:last-child {
-    margin-left: 24px;
-  }
-}
-
-.offering-buttons__item:last-child::after {
-  display: flex;
-  content: "";
-  width: 14px;
-  height: 14px;
-  background-color: transparent;
-  background-image: url(../images/svg/arrow.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  align-items: center;
-  margin-left: 4px;
 }
