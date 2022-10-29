@@ -11,8 +11,6 @@
   background-size: contain;
   max-width: 480px;
 
-  
-
   @include tablet {
     padding: 60px 0;
 
@@ -38,12 +36,6 @@
     background-position: bottom;
     background-repeat: no-repeat;
   }
-
-  
-
-
-  
-
 
   &__container {
     @extend %container;
@@ -77,10 +69,7 @@
     }
 
     @include desktop {
-
       width: 502px;
     }
   }
 }
-
-
