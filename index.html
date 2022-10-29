@@ -104,10 +104,22 @@
       <section class="offering">
         <div class="offering-container">
           <div class="offering__picture offering__picture--mob">
-             <img src="./images/fruits/apple-1600.webp" 
-             alt="apple"
-             width="100%">
             
+            <picture>
+              <source
+                srcset="
+                  ./images/fruits/apple-mob-1x.png 1x,
+                  ./images/fruits/apple-mob-2x.png 2x
+                "
+                type="image/png"
+                media="(max-widthh: 767px)"
+              />
+              <img
+                src="./images/fruits/apple-mob-1x.png"
+                alt="Apples"
+                width="100%"
+              />
+
             <!-- <picture>
       
               <source
