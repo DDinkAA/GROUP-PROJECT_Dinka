@@ -22,9 +22,9 @@
     margin-bottom: 32px;
   }
 
-  background-image: url(../images/backgrounds/mobile/rectangle2-mob-1x.jpeg);
+  background-image: url(../images/backgrounds/back2-mob-1x.jpg);
   @include retina {
-    background-image: url(../images/backgrounds/mobile/rectangle2-mob-1x.jpeg);
+    background-image: url(../images/backgrounds/back2-mob-2x.jpg);
   }
 
   background-repeat: no-repeat;
@@ -33,9 +33,9 @@
   max-width: 480px;
 
   @include tablet {
-    background-image: url(../images/backgrounds/tab/rectangle2-tab-1x.jpeg);
+    background-image: url(../images/backgrounds/back2-tab-1x.jpg);
     @include retina {
-      background-image: url(../images/backgrounds/tab/rectangle2-tab-2x.jpeg);
+      background-image: url(../images/backgrounds/back2-tab-2x.jpeg);
     }
 
     background-position: bottom center;
@@ -44,9 +44,9 @@
   }
 
   @include desktop {
-    background-image: url(../images/backgrounds/desktop/rectangle2-desk-1x.jpeg);
+    background-image: url(../images/backgrounds/back2-desk-1x.jpg);
     @include retina {
-      background-image: url(../images/backgrounds/desktop/rectangle2-desk-2x.jpeg);
+      background-image: url(../images/backgrounds/back2-desk-2x.jpg);
     }
     background-position: top center;
     background-repeat: no-repeat;

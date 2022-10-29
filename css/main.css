@@ -606,7 +606,7 @@ p {
 .reviews {
   position: relative;
   padding: 60px 0 60px;
-  background-image: url(../images/backgrounds/mobile/rectangle2-mob-1x.jpeg);
+  background-image: url(../images/backgrounds/back2-mob-1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -631,12 +631,12 @@ p {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .reviews {
-    background-image: url(../images/backgrounds/mobile/rectangle2-mob-1x.jpeg);
+    background-image: url(../images/backgrounds/back2-mob-1x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .reviews {
-    background-image: url(../images/backgrounds/tab/rectangle2-tab-1x.jpeg);
+    background-image: url(../images/backgrounds/back2-tab-1x.jpg);
     background-position: bottom center;
     background-repeat: no-repeat;
     max-width: 768px;
@@ -644,12 +644,12 @@ p {
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .reviews {
-    background-image: url(../images/backgrounds/tab/rectangle2-tab-2x.jpeg);
+    background-image: url(../images/backgrounds/back2-tab-1x.jpeg);
   }
 }
 @media screen and (min-width: 1280px) {
   .reviews {
-    background-image: url(../images/backgrounds/desktop/rectangle2-desk-1x.jpeg);
+    background-image: url(../images/backgrounds/back2-desk-1x.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     max-width: 1280px;
@@ -657,7 +657,7 @@ p {
 }
 @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .reviews {
-    background-image: url(../images/backgrounds/desktop/rectangle2-desk-2x.jpeg);
+    background-image: url(../images/backgrounds/back2-desk-1x.jpg);
   }
 }
 
