@@ -644,7 +644,7 @@ p {
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .reviews {
-    background-image: url(../images/backgrounds/back2-tab-2x.jpeg);
+    background-image: url(../images/backgrounds/back2-tab-2x.jpg);
   }
 }
 @media screen and (min-width: 1280px) {
