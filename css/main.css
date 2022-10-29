@@ -199,43 +199,46 @@ p {
 }
 
 .hero {
-  padding: 50px 0 60px;
+  padding: 50px 0 110px;
+  background-image: url(../images/backgrounds/back1-mob-1x.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  max-width: 480px;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../images/backgrounds/back1-mob-2x.jpg);
+  }
 }
 @media screen and (min-width: 768px) {
   .hero {
     padding: 60px 0;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero {
-    padding: 159px 0 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .hero {
     max-width: 768px;
     height: 510px;
-    background-image: url(../images/backgrounds/tab/rectangle1-tab-1x.jpeg);
-    background-position: 0 361px;
+    background-image: url(../images/backgrounds/back1-tab-1x.jpg);
+    background-position: bottom;
     background-repeat: no-repeat;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/backgrounds/tab/rectangle1-tab-2x.jpeg);
+    background-image: url(../images/backgrounds/back1-tab-2x.jpg);
   }
 }
 @media screen and (min-width: 1280px) {
   .hero {
+    padding: 159px 0 0;
     min-width: 1280px;
     height: 633px;
-    background-image: url(../images/backgrounds/desktop/rectangle1-desk-1x.jpeg);
-    background-position: 0 447px;
+    background-image: url(../images/backgrounds/back1-desk-1x.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
   }
 }
 @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/backgrounds/desktop/rectangle1-desk-1x.jpeg);
+    background-image: url(../images/backgrounds/back1-desk-2x.jpg);
   }
 }
 .hero__title {
